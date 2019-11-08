@@ -1,0 +1,71 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{reportstyle}[Report Style]
+
+%% PACKAGES
+% for captioning figures, you can set caption style here as well
+\usepackage[font={small,it}]{caption}
+
+% position images as latex will put your image where it best fits unless you tell it otherwise
+\usepackage{float}
+
+% for including images
+\usepackage{graphicx}
+
+% for sexy bold lines to the tops of tables
+\usepackage{makecell}
+
+% set your margin size
+\usepackage[margin=25mm]{geometry}
+
+% for headers and footers
+\usepackage{fancyhdr}
+
+% This needs to be in here if you want to set up your document with more than one column in sections 
+\usepackage{multicol}
+
+% Here are a few packages that help with formatting equations, you may not need to use this but I find align* from amsmath particularly useful
+\usepackage{amsmath,amssymb,amsthm,textcomp}
+
+% Also not necessary but I find it handy when formatting arrays and matrices
+\usepackage{array}
+
+%multilanguage support
+\usepackage[english]{babel}
+% utf8 support
+\usepackage[utf8]{inputenc}
+
+% format units and values
+\usepackage{siunitx}
+
+% for including csv as table
+\usepackage{pgfplotstable} % Generates table from .csv
+\usepackage{tabularx} %for nicer table widths
+
+% for inline code
+\usepackage{listings}
+
+%% STYLE SETTINGS
+
+% si unit settings
+\sisetup{
+  round-mode      = places, % Rounds numbers
+  round-precision = 2, % to 2 places
+}
+
+\lstset{language=C}
+
+%Includes "References" in the table of contents
+\usepackage[nottoc]{tocbibind}
+\usepackage{hyperref}
+
+% Enhances Latex's cross referencing
+\usepackage{cleveref}
+
+% hyperlink styles
+\hypersetup{
+    colorlinks,
+    citecolor=blue,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}

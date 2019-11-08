@@ -1,0 +1,52 @@
+\newpage
+\section{Appendices}
+
+\subsection{Experiment Implementation}\label{app:experiment}
+Some example code inclusion
+
+\begin{lstlisting}
+//setup the csv file to write to
+string output_file = "output.csv";
+File.Delete(output_file);
+File.AppendAllText(output_file, "n, count1, count2, ms1, ms2\n");
+int runs = 250;
+
+// iterate through problem sizes (n)
+for (int n = 1000; n <= 20000; n += 500) {
+    Console.WriteLine("running tests for problem size " + n);
+    
+    // iterate through repetitions of the problem size
+    for (int i = 0; i < runs; i++) {
+        int[] array = createRandomArray(n);
+        int distance1;
+        int distance2;
+
+        // call the methods which increments the global count variable
+        count = 0;
+        distance1 = minDistanceCount(array);
+        int count1 = count;
+        count = 0;
+        distance2 = minDistance2Count(array);
+        int count2 = count;
+
+        // call the methods and record the elapsed time
+        timer.Reset();
+        timer.Start();
+        distance1 = minDistanceTime(array);
+        timer.Stop();
+        double ms1 = timer.ElapsedMilliseconds;
+        timer.Reset();
+        timer.Start();
+        distance2 = minDistance2Time(array);
+        timer.Stop();
+        double ms2 = timer.ElapsedMilliseconds;
+
+        // write a record to the csv for the containing problem size, 
+        // operation count and execution time
+        File.AppendAllText(
+            output_file, 
+            n + "," + count1 + "," + count2 + "," + ms1 + "," + ms2 + "\n"
+        );
+    }
+}
+\end{lstlisting}

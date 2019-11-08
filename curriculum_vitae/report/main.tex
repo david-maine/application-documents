@@ -1,0 +1,23 @@
+\documentclass{article}
+
+\usepackage{reportstyle}
+\pgfplotsset{compat=1.16}
+
+% Page Header
+\pagestyle{fancy}
+\rhead{Author}
+\lhead{Report Title}
+% Page Footer
+\cfoot{\thepage}
+
+% Begin the document
+\begin{document}
+
+% Generate the title page
+\input{titlepage.tex}
+\newpage
+
+% Body of the report
+\input{body/sectionmain.tex}
+
+\end{document}
