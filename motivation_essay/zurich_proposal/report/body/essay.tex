@@ -1,0 +1,26 @@
+\section*{Representative Convolutional Encoders for Graph Neural Networks}
+Graph data structures naturally represent underlying relationships in almost any field. In contrast analytics, particularly statistical inference, is generally performed on more constricted tabular structures. This includes many graph analytical techniques that first encode or map graph properties to euclidean space. A promising area of research for this problem is the concept of Graph Neural Networks (GNN). One variant of GNNs are convolutional graph neural networks that generalise convolution operations from grid data such as images to graph structures (Wu et al., 2019). In this process high level node representations are derived by aggregating its own and neighbouring features (Bastings et al., 2017).
+
+\subsection*{Objectives and goals}
+The objective of this proposal is to investigate improvements for Convolutional Graph Neural Network encoders. Common approaches rely on recursive operations to capture information flowing over multiple hops. A limitation of this approach is that the recursive operations result in over smoothing of the dataset, preventing a deep structure (Zhou et al., 2018). The project will investigate alternative data structure representations and convolution operations to better capture and maintain the inherent relationships. Given this research focuses on the encoder component of the Neural Network, it may be applicable to numerous model variants.
+
+\subsection*{Methods of investigation and implementation}
+A Literature review will identify the state of the art Convolutional GNN encoders, and their respective limitations. Cloud services may be used to collect, process, store and run experiments on representative datasets from varying disciplines, such as program analysis, social analysis and biology. The convolutional encoder can be benchmarked against varying approaches and problems, such as reconstructing the adjacency matrices or learning the generative graph distribution.
+
+\subsection*{Background and prior work}
+My interest in Graph Neural Networks originates from my current research project at Oracle Labs: to detect the presence of security patches in Java applications. My approach is to identify sub graphs representing software patches within application call and control flow graphs. Graph Neural Network models have the potential to identify these subgraphs, in addition to similar problems in program analysis, such as identifying bad practice or malicious patterns. 
+
+\subsection*{Timetable and milestones}
+The core milestones over the 5 month thesis project consists of a literature review, data collection, experiments, supporting theoretical work and thesis delivery. The first block of work will consist of a literature review and data collection in parallel over approximately four weeks. The bulk of the project will be dedicated to experiments, including benchmarking against alternative methods, and the development of supporting theoretical work over approximately three months. The thesis will be developed in conjunction with these milestones. The final month will be dedicated to consolidating and refining the Master thesis.
+
+\subsection*{References}
+
+Bastings, J., Titov, I., Aziz, W., Marcheggiani, D., \& Sima'an, K. (2017). Graph convolutional encoders for syntax-aware neural machine translation. arXiv preprint arXiv:1704.04675.
+\\
+\\
+Wu, Z., Pan, S., Chen, F., Long, G., Zhang, C., \& Yu, P. S. (2019). A comprehensive survey on graph neural networks. arXiv preprint arXiv:1901.00596.
+\\
+\\
+Zhou, J., Cui, G., Zhang, Z., Yang, C., Liu, Z., \& Sun, M. (2018). Graph neural networks: A review of methods and applications. arXiv preprint arXiv:1812.08434.
+
+
